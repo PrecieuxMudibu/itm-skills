@@ -1,0 +1,19 @@
+.footer {
+	display: flex;
+	padding: 10px 0;
+	margin: 10px 0;
+	border-radius: 2px;
+}
+.icon {
+	color: #57aff2;
+}
+.reder {
+	color: green;
+}
+.icon2{
+	color: green;
+
+}
+.cursorPointer{
+	cursor: pointer !important;
+}

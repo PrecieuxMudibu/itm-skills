@@ -1,0 +1,116 @@
+.banniere {
+	position: relative;
+	height: 200px;
+	width: 100%;
+	background: linear-gradient(45deg, #57aff2, #533a90);
+}
+.croix {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	color: white;
+}
+.croix:hover {
+	cursor: pointer;
+}
+.profile svg {
+	height: 120px;
+	width: 120px;
+	background-color: #57aff2;
+	border-radius: 50%;
+	border: 10px solid white;
+	padding: 15px;
+	color: white;
+}
+.left {
+	background-color: white;
+	transform: translateY(-175px);
+}
+.right {
+	background-color: white;
+	height: 60vh;
+	transform: translateY(-60px);
+	padding: 0;
+}
+.profile {
+	width: 100%;
+}
+
+.svg {
+	height: 40px !important;
+	width: 40px !important;
+	color: #57aff2 !important;
+	background-color: #ffffff !important;
+	border-radius: 0% !important;
+	border: none !important;
+	padding: 5px !important;
+}
+
+.header {
+	height: 75px;
+	width: 100%;
+	transform: translateY(-105px);
+	background-color: white;
+}
+.body {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+	transform: translateY(-60px);
+	overflow-y: scroll;
+	height: 100%;
+}
+.body::-webkit-scrollbar {
+	width: 3px;
+}
+.body::-webkit-scrollbar-thumb {
+	background: linear-gradient(
+		45deg,
+		transparent,
+		#57aff2,
+		#533a90,
+		transparent
+	);
+}
+.link {
+	display: flex;
+	align-items: center;
+	height: 90%;
+}
+.active {
+	margin: 5% 0;
+	color: white;
+	background: linear-gradient(45deg, #57aff2, #533a90 95%);
+	border-radius: 0 0 20px 0px;
+	font-weight: bolder;
+}
+.ficheRed {
+	padding: 10px;
+	border-radius: 5px;
+	width: 45%;
+	font-size: 0.9em;
+	box-shadow: 0 0 15px rgba(19, 8, 8, 0.101);
+	margin: 10px;
+}
+.ficheRed svg {
+	height: 70px;
+	width: 70px;
+	background: linear-gradient(45deg, #57aff2, #533a90 95%);
+	border-radius: 50%;
+	padding: 15px;
+	color: white;
+	margin: auto;
+}
+.ficheblue {
+	background-color: #57aff2;
+	padding: 10px;
+	border-radius: 5px;
+	width: 45%;
+	font-size: 0.9em;
+	color: white;
+	border-bottom: 1px solid white;
+}
+.paginate {
+	transform: translateY(-100%);
+}

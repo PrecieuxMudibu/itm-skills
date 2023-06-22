@@ -1,0 +1,12 @@
+.borderConnexion {
+	background: #57aff2;
+	color: #ffffff !important;
+	border-radius: 5px !important;
+	border: solid 1px #57aff2 !important;
+	width: 100%;
+	margin: 10px 0;
+}
+.borderConnexion:hover {
+	background: transparent;
+	color: #57aff2 !important;
+}

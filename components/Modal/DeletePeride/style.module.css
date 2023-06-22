@@ -1,0 +1,132 @@
+
+
+  .bdnone{
+  border:none !important;
+
+  }
+  .bdnone:focus{
+  outline: none !important;
+
+  }
+  .bordernone{
+  border:none !important;
+  
+  }
+  
+  .bordernone:focus{
+  outline: none !important;
+  }
+  .bordergreen:focus {
+    outline:  none !important;
+  }
+  .boxshadow{
+    
+    border: 1px solid #FFFFFF;
+  box-shadow: 0px  0px 4px -1px rgba(0, 0, 0, 0.25);
+  }
+  
+  .forms {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .bordergreen {
+    border-bottom: solid 1px #57aff2 !important;
+    background-color: transparent !important;
+    border-radius: 5px;
+    width: 100%;
+    padding: 0 15px;
+  }
+ 
+
+  .bordernone {
+    border: none !important;
+    width: 100%;
+    margin: 10px 0;
+  }
+  .border p,
+  .bordernone p {
+    padding-top: 10px;
+  }
+  .bordernone:focus {
+    outline: none !important;
+  }
+  .bordergreen:focus {
+    outline: none !important;
+  }
+  .borderred:focus {
+    outline-color: red;
+  }
+ 
+  .fs{
+    font-size: 12px !important;
+  }
+
+
+  .container {
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    height: 100%;
+    width: 100%;
+    z-index: 9999;
+    background-color: rgba(27, 16, 16, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .card {
+    height: auto;
+    width: 35vw;
+    border-radius: 5px;
+    background-color: white;
+    overflow: hidden;
+    padding-bottom: 20px;
+  }
+  .croix {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: white;
+  }
+  .croix:hover{
+    cursor: pointer;
+  }
+ 
+  .header {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 150px;  */
+    width: 100%;
+    color: white;
+    background: linear-gradient(45deg, #8f1919bf, #8e171f87);
+  }
+  .croix {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+  .croix:hover{
+    cursor: pointer;
+  }
+
+  .borderred {
+    border: solid 1px #8f1919  !important;
+    background: linear-gradient(45deg, #8f1919bf, #8e171f87)  !important;
+    border-radius: 5px;
+    width: 100%;
+    margin-bottom: 0% !important;
+    
+  }
+
+  .borderred:hover {
+    border: solid 1px #8f1919 !important;
+    background: transparent  !important;
+    color: #8f1919 !important;
+    border-radius: 5px;
+    
+  }

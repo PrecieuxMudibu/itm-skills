@@ -1,0 +1,44 @@
+.padding {
+	margin-right: 50px !important;
+}
+.borderbleu {
+	border: solid 1px #dfe1e7 !important;
+	background-color: transparent !important;
+	border-radius: 5px;
+}
+.borderbleu:focus {
+	outline: none !important;
+}
+.color {
+	color: #cac5de !important;
+}
+.parent {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	flex-wrap: wrap;
+	height: 85vh;
+	width: 85%;
+	margin: auto;
+}
+.parent h1 {
+	text-align: center;
+	background: #57aff225;
+	border-radius: 15px;
+	padding: 70px 50px;
+}
+.container {
+	height: 100px;
+	width: 100px;
+	background: #57aff2;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	box-shadow: 0 0 55px #57aff2;
+	transition: 0.5s;
+}
+.container:hover {
+	transform: scale(1.2);
+	cursor: pointer;
+}
