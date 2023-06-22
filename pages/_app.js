@@ -1,7 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/css/bootstrap.css'
 import '@fortawesome/fontawesome-svg-core/styles.css'
-import '../styles/generalstyle.module.css'
 import '../styles/global.css'
 import Head from 'next/head'
 import { ApolloProvider } from '@apollo/client'
