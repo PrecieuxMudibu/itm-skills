@@ -29,12 +29,12 @@ const Login = () => {
 	const sendData = async () => {
 		let currentFamily = ''
 		for (let i = 0; i < excelFileData.length; i++) {
-			console.log(`ELEMENT NUMERO---> ${i}`)
+			console.log(`ELEMENT NUMERO---> ${i + 1}`)
 
 			const item = excelFileData[i]
 			if (item['FAMILY TITLE'] != currentFamily) {
 				currentFamily = item['FAMILY TITLE']
-				console.log(currentFamily)
+				console.log(currentFamily, '----------------------------------')
 			}
 			const responseDomains = await getDomains({
 				variables: {
@@ -69,12 +69,16 @@ const Login = () => {
 				domain = responseDomains.data.domains[0]
 			}
 
+			// -----------
+			const jobTitleWithoutLevel = item['JOB TITLE'].split(' - ')[0]
+			// -----------
+
 			const responseSkills = await getSkills({
 				variables: {
 					args: {
 						args: {
 							name: {
-								en: item['JOB TITLE'],
+								en: jobTitleWithoutLevel,
 							},
 						},
 					},
@@ -88,8 +92,8 @@ const Login = () => {
 							type: 'Job',
 							domain: domain._id,
 							name: {
-								en: item['JOB TITLE'],
-								fr: item['JOB TITLE'],
+								en: jobTitleWithoutLevel,
+								fr: jobTitleWithoutLevel,
 							},
 							skills: [SKILLS_OTHER_ID],
 						},
@@ -119,29 +123,3 @@ const Login = () => {
 }
 
 export default Login
-
-// useEffect(() => {
-// 	getSkills({
-// 		variables: {
-// 			args: {
-// 				option: {
-// 					limit: '100000',
-// 					page: '1',
-// 				},
-// 			},
-// 		},
-// 	})
-// }, [])
-
-// useEffect(() => {
-// 	getDomains({
-// 		variables: {
-// 			args: {
-// 				option: {
-// 					limit: '100000',
-// 					page: '1',
-// 				},
-// 			},
-// 		},
-// 	})
-// }, [])
