@@ -28,6 +28,8 @@ const Login = () => {
 
 	const sendData = async () => {
 		let currentFamily = ''
+		let domain = {}
+
 		for (let i = 0; i < excelFileData.length; i++) {
 			console.log(`ELEMENT NUMERO---> ${i + 1}`)
 
@@ -35,38 +37,36 @@ const Login = () => {
 			if (item['FAMILY TITLE'] != currentFamily) {
 				currentFamily = item['FAMILY TITLE']
 				console.log(currentFamily, '----------------------------------')
-			}
-			const responseDomains = await getDomains({
-				variables: {
-					args: {
-						args: {
-							name: {
-								en: item['FAMILY TITLE'],
-							},
-						},
-					},
-				},
-			})
-
-			let domain = {}
-
-			if (responseDomains.data.domains.length == 0) {
-				// CREATE THE DOMAIN
-				const responseMutation = await addDomain({
+				const responseDomains = await getDomains({
 					variables: {
 						args: {
-							name: {
-								en: item['FAMILY TITLE'],
-								fr: item['FAMILY TITLE'],
+							args: {
+								name: {
+									en: item['FAMILY TITLE'],
+								},
 							},
-							skills: [SKILLS_OTHER_ID],
 						},
 					},
 				})
-				domain = responseMutation.data.addDomain
-				console.log('DOMAINE CREE', responseMutation)
-			} else {
-				domain = responseDomains.data.domains[0]
+
+				if (responseDomains.data.domains.length == 0) {
+					// CREATE THE DOMAIN
+					const responseMutation = await addDomain({
+						variables: {
+							args: {
+								name: {
+									en: item['FAMILY TITLE'],
+									fr: item['FAMILY TITLE'],
+								},
+								skills: [SKILLS_OTHER_ID],
+							},
+						},
+					})
+					domain = responseMutation.data.addDomain
+					console.log('DOMAINE CREE', responseMutation)
+				} else {
+					domain = responseDomains.data.domains[0]
+				}
 			}
 
 			// -----------
